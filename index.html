@@ -4,11 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet JS</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+
   <body>
-    <header><h1>Projet JS</h1></header>
-    <nav>Navigation</nav>
-    <article>Contenu</article>
-    <footer>Portos Tom</footer>
+    <header>
+      <h1 id="header-name">
+        Meme<span id="dot">.</span><span id="js">js</span>
+      </h1>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" aria-current="page"
+                >Home <span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="#">Action 1</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <article>
+      <div id="editor" class="flex-col">
+        <div style="display: flex; justify-content: center" id="editor-viewer">
+          <img
+            src="https://css-tricks.com/wp-content/uploads/2015/05/kiwi.svg"
+            alt=""
+          />
+        </div>
+        <div style="border-style: groove; border-color: black;" id="editor-form">
+          <form action="#" name="meme-form">
+            <div>
+              <h2>Titre</h2>
+            </div>
+            <input type="text" placeholder="React is easy" name="titre" />
+            <hr />
+            <label for="meme-image"><h2>Image</h2></label>
+            <br />
+            <select name="imageId" id="meme-image">
+              <option value="-1">Aucune image</option>
+            </select>
+            <hr />
+            <h2>Texte</h2>
+            <input type="text" placeholder="Your text" name="text" />
+            <div class="flex-col" style="margin-top: 3%;">
+              <div class="flex-col" style="margin-left: 20%;">
+                <label style="margin-right: 5%;" for="x">x:</label>
+                <br />
+                <input style="height: 70%; width: 30%;" id="x" type="number" name="x" />
+              </div >
+              <div class="flex-col">
+                <label style="margin-right: 5%;" for="y">y:</label>
+                <br />
+                <input style="height: 70%; width: 30%;" id="y" type="number" />
+              </div>
+            </div>
+            <hr />
+
+            <h2>Decorations</h2>
+            <div>
+              <div>
+                <label for="color"><h2>color:</h2></label>
+                <input type="color" id="color" />
+              </div>
+              <div>
+                <label for="font-size"><h2>font-size:</h2></label>
+                <input type="number" id="font-size" />px
+              </div>
+              <div>
+                <label for="font-weight"><h2>font-weight:</h2></label>
+                <input type="number" id="font-weight" />
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox1" />
+                <label for="checkbox1"><h2>underline/</h2></label>
+                <label for="checkbox2"><h2>italic</h2></label>
+                <input type="checkbox" id="checkbox2" />
+              </div>
+            </div>
+            <div >
+              <input
+                class="btn btn-danger"
+                id="meme-reset"
+                type="reset"
+                value="Annuler"
+              />
+              <button style="margin-left: 8%;" class="btn btn-primary" type="submit" id="meme-submit">
+                Valider
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
   </body>
 </html>

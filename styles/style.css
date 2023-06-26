@@ -1,0 +1,62 @@
+#header-name{
+    color: rgb(136, 255, 0);
+    font-size: 100px;
+    font-weight: bolder;
+    text-shadow: 20px 20px 25px powderblue;
+    text-decoration: underline rgb(108, 7, 209);
+}
+
+#dot{
+    color: rebeccapurple"
+}
+
+#js{
+    color: rgb(246, 248, 235)
+}
+
+footer{
+    text-align: center;
+}
+
+body{
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    flex-grow: 1;
+}
+
+#editor >*:first-child{
+    display: flex;
+    flex-grow: 1;
+}
+
+#editor >*:first-child>*{
+
+    height: 70%;
+    width: 70%;
+}
+
+.flex-col{
+    display: flex;
+    align-content: center;
+}
+
+.flex-col >*{
+    text-align: center;
+}
+
+input[type="number"]{
+    width: 100px;
+    padding: 5px;
+}
+
+.editor{
+    display: flex;
+    align-items: center;
+}
+.center{
+    text-align: center;
+}
