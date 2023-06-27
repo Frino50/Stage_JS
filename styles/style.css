@@ -4,6 +4,12 @@
     font-weight: bolder;
     text-shadow: 20px 20px 25px powderblue;
     text-decoration: underline rgb(108, 7, 209);
+    flex-grow: 1;
+    margin-bottom: 10%;
+}
+
+header{
+display: flex;
 }
 
 #dot{
