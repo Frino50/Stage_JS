@@ -1,3 +1,6 @@
+import { initMemeEditor } from "./memeform.js";
+
+
 function init() {
   document
     .querySelector("#flexSwitchCheckDefault")
