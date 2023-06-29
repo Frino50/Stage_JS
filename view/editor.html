@@ -1,0 +1,105 @@
+<article>
+  <div id="editor" class="flex-col">
+    <div style="display: flex; justify-content: center" id="editor-viewer">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 1000 1000"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <image name="kiwi" xlink:href="/kiwi.svg" x="0" y="0" />
+        <text
+          x="10"
+          y="20"
+          font-style:
+          italic
+          font-weight="900"
+          style="text-decoration: underline; fill: aqua"
+        >
+          DEMAT BREIZH
+        </text>
+      </svg>
+    </div>
+    <div style="border-style: groove; border-color: black" id="editor-form">
+      <form action="#" name="meme-form">
+        <div>
+          <h2>Titre</h2>
+        </div>
+        <input type="text" placeholder="React is easy" name="titre" />
+        <hr />
+        <label for="meme-image"><h2>Image</h2></label>
+        <br />
+        <select name="imageId" id="meme-image">
+          <option value="-1">Aucune image</option>
+        </select>
+        <hr />
+        <h2>Texte</h2>
+        <input type="text" placeholder="Your text" name="text" />
+        <div class="flex-col" style="margin-top: 3%">
+          <div class="flex-col" style="margin-left: 16%">
+            <label style="margin-right: 4%" for="x">x:</label>
+            <br />
+            <input
+              style="height: 70%; width: 40%"
+              id="x"
+              type="number"
+              name="x"
+            />
+          </div>
+          <div class="flex-col">
+            <label style="margin-right: 5%" for="y">y:</label>
+            <br />
+            <input
+              style="height: 70%; width: 40%"
+              id="y"
+              type="number"
+              name="y"
+            />
+          </div>
+        </div>
+        <hr />
+
+        <h2>Decorations</h2>
+        <div>
+          <div>
+            <label for="color"><h2>color:</h2></label>
+            <input type="color" id="color" name="color" />
+          </div>
+          <div>
+            <label for="font-size"><h2>font-size:</h2></label>
+            <input type="number" id="font-size" name="font-size" />px
+          </div>
+          <div>
+            <label for="font-weight"><h2>font-weight:</h2></label>
+            <input type="number" id="font-weight" name="font-weight" />
+          </div>
+          <div>
+            <input type="checkbox" id="checkbox1" name="underline" />
+            <label for="checkbox1"><h2>underline/</h2></label>
+            <label for="checkbox2"><h2>italic</h2></label>
+            <input type="checkbox" id="checkbox2" name="italic" />
+          </div>
+        </div>
+        <hr />
+        <div>
+          <input
+            class="btn btn-danger"
+            id="meme-reset"
+            type="reset"
+            value="Annuler"
+          />
+          <button
+            style="margin-left: 8%"
+            class="btn btn-primary"
+            type="submit"
+            id="meme-submit"
+          >
+            Valider
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</article>
