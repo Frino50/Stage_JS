@@ -4,32 +4,38 @@ export class Ressources {
   #memes = [];
   #isLoaded = false;
 
-  getImages() {
+  get images() {
     return this.#images;
   }
 
-  getisLoaded() {
+  get isLoaded() {
     return this.#isLoaded;
   }
 
-  getMemes() {
+  get memes() {
     return this.#memes;
   }
 
-  loadRessources() {
+  loadRessources(callback) {
     const promiseImages = fetch(REST_ADR + RESSOURCE_PATH.images).then((resp) =>
       resp.json()
     );
+
     const promiseMemes = fetch(REST_ADR + RESSOURCE_PATH.memes).then((resp) =>
       resp.json()
     );
+
     Promise.all([promiseImages, promiseMemes]).then((array) => {
       this.#images.splice(0);
       this.#images.push(...array[0]);
       this.#memes.splice(0);
       this.#memes.push(...array[1]);
       this.#isLoaded = true;
+      
+      if (undefined !== callback && typeof callback === "function") {
+        callback(this);
+      }
     });
   }
 }
-export const ressource = new Ressources();
+export const ressources = new Ressources();
